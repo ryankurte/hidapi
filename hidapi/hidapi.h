@@ -263,6 +263,17 @@ extern "C" {
 		*/
 		int  HID_API_EXPORT HID_API_CALL hid_set_nonblocking(hid_device *device, int nonblock);
 
+		/** @bried Fetch a file descriptor from the device.
+		 
+		 * Only supported for linux platforms, useful for epoll etc.
+		 	@ingroup API
+			@param device A device handle returned from hid_open().
+
+			@returns
+				This function returns a +ve file descriptor on success and -1 on error.
+		*/
+		int  HID_API_EXPORT HID_API_CALL hid_get_fd(hid_device *device);
+
 		/** @brief Send a Feature report to the device.
 
 			Feature reports are sent over the Control endpoint as a

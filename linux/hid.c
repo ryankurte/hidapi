@@ -674,6 +674,9 @@ int HID_API_EXPORT hid_write(hid_device *dev, const unsigned char *data, size_t 
 	return bytes_written;
 }
 
+int HID_API_EXPORT hid_get_fd(hid_device *dev) {
+	return dev->device_handle;
+}
 
 int HID_API_EXPORT hid_read_timeout(hid_device *dev, unsigned char *data, size_t length, int milliseconds)
 {

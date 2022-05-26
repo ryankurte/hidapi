@@ -746,6 +746,10 @@ int HID_API_EXPORT HID_API_CALL hid_set_nonblocking(hid_device *dev, int nonbloc
 	return 0; /* Success */
 }
 
+int HID_API_EXPORT HID_API_CALL hid_get_fd(hid_device *dev) {
+	return -1;
+}
+
 int HID_API_EXPORT HID_API_CALL hid_send_feature_report(hid_device *dev, const unsigned char *data, size_t length)
 {
 	BOOL res = HidD_SetFeature(dev->device_handle, (PVOID)data, length);

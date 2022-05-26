@@ -1170,6 +1170,9 @@ int HID_API_EXPORT hid_set_nonblocking(hid_device *dev, int nonblock)
 	return 0;
 }
 
+int HID_API_EXPORT hid_get_fd(hid_device *dev) {
+	return -1;
+}
 
 int HID_API_EXPORT hid_send_feature_report(hid_device *dev, const unsigned char *data, size_t length)
 {
